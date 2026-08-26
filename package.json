@@ -1,7 +1,7 @@
 {
   "name": "telegram-news-bot",
   "version": "1.0.0",
-  "description": "Telegram News Bot - Ad friendly",
+  "description": "Telegram News Bot",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
