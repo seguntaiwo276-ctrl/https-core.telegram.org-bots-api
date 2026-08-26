@@ -1,41 +1,56 @@
-const { content } = require('../../data/content.json');
-
 module.exports = async (msg, bot) => {
   const chatId = msg.chat.id;
   
-  const newsContent = content.news[Math.floor(Math.random() * content.news.length)];
-  
-  const message = `
-📰 *Global News Summary*
+  try {
+    const welcomeMessage = `
+📰 *Telegram News & Information Bot*
 
-*${newsContent.title}*
+Welcome to your daily information hub!
 
-${newsContent.content}
+*Available Services:*
+• 🔹 Daily market updates & analysis
+• 📰 Global news without filter
+• ⚽ Sports news and highlights
+• 💰 Personal finance education
+• 🔐 No data collection or tracking
 
-*Key Developments:*
-${newsContent.points.map(p => `• ${p}`).join('\n')}
+*How this bot helps:*
+- Daily curated content on multiple topics
+- Educational, ad-friendly information
+- No sign-ups or personal data required
+- Complete privacy and transparency
 
-*Stay Informed:*
-• Fact-checked information
-• Multiple perspectives
-• No political bias
-• Educational content only
+*Start exploring:*
+Use the buttons below or commands:
+/crypto - Market updates
+/news - Global news
+/sports - Sports information
+/finance - Finance education
 
-Use /news for more updates
+*Support:* Questions or suggestions? Send a message here and we'll respond within 24 hours.
+
+Made with ❤️ for informed communities
   `;
   
-  await bot.sendMessage(chatId, message, {
-    parse_mode: 'Markdown',
-    reply_markup: {
-      inline_keyboard: [
-        [
-          { text: '🔄 More News', callback_data: 'news' },
-          { text: '⚽ Sports', callback_data: 'sports' }
+    await bot.sendMessage(chatId, welcomeMessage, {
+      parse_mode: 'Markdown',
+      reply_markup: {
+        keyboard: [
+          [
+            { text: '📊 Crypto Update' },
+            { text: '📰 News' }
+          ],
+          [
+            { text: '⚽ Sports' },
+            { text: '💰 Finance' }
+          ]
         ],
-        [
-          { text: '🏠 Main Menu', callback_data: 'start' }
-        ]
-      ]
-    }
-  });
+        resize_keyboard: true,
+        one_time_keyboard: false
+      }
+    });
+  } catch (error) {
+    console.error('Start handler error:', error);
+    await bot.sendMessage(chatId, 'Sorry, an error occurred. Please try again later.');
+  }
 };
