@@ -1,0 +1,20 @@
+telegram-bot/
+├── .env
+├── .gitignore
+├── package.json
+├── railway.json
+├── README.md
+├── index.js
+├── bot/
+│   ├── handlers/
+│   │   ├── start.js
+│   │   ├── crypto.js
+│   │   ├── news.js
+│   │   ├── sports.js
+│   │   └── finance.js
+│   ├── utils/
+│   │   ├── validators.js
+│   │   └── formatters.js
+│   └── keyboard.js
+└── data/
+    └── content.json
