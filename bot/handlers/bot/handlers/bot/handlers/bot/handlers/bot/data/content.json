@@ -1,0 +1,60 @@
+{
+  "crypto": [
+    {
+      "title": "Understanding Blockchain Technology",
+      "content": "Blockchain represents a fundamental shift in how data is stored and verified. This distributed ledger technology enables secure, transparent transactions without central authority.",
+      "points": [
+        "Decentralized verification systems",
+        "Immutable record keeping",
+        "Smart contract applications",
+        "Real-world use cases beyond cryptocurrency"
+      ]
+    },
+    {
+      "title": "Digital Wallet Security Best Practices",
+      "content": "Protecting digital assets requires understanding security fundamentals. Proper wallet management includes private key protection, multi-factor authentication, and regular security audits.",
+      "points": [
+        "Use hardware wallets for major holdings",
+        "Enable two-factor authentication",
+        "Regular backup of private keys",
+        "Avoid sharing sensitive information"
+      ]
+    }
+  ],
+  "news": [
+    {
+      "title": "Digital Banking Transformation in 2024",
+      "content": "Banks worldwide are accelerating digital transformation, introducing AI-powered services, mobile-first banking, and enhanced cybersecurity measures to meet evolving customer needs.",
+      "points": [
+        "AI-driven customer service integration",
+        "Enhanced mobile banking features",
+        "Biometric authentication growth",
+        "Open banking initiatives"
+      ]
+    }
+  ],
+  "sports": [
+    {
+      "title": "Athlete Performance Analytics",
+      "content": "Modern sports analytics revolutionize how teams evaluate performance, prevent injuries, and develop winning strategies through data-driven decision making.",
+      "points": [
+        "Real-time performance tracking",
+        "Injury prevention through data",
+        "Strategic gameplay optimization",
+        "Player development monitoring"
+      ]
+    }
+  ],
+  "finance": [
+    {
+      "title": "Understanding Digital Banking Security",
+      "content": "Digital banking security involves multiple layers of protection, including encryption, authentication, and continuous monitoring to safeguard financial transactions.",
+      "points": [
+        "End-to-end encryption protocols",
+        "Multi-factor authentication benefits",
+        "Fraud detection systems",
+        "Secure transaction verification"
+      ]
+    }
+  ]
+}
